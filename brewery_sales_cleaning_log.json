@@ -1,0 +1,149 @@
+{
+  "source": "https://huggingface.co/datasets/ankurnapa/Brewery_sales/resolve/main/brewery_data_complete_extended.csv",
+  "output": "brewery_sales_cleaned.csv",
+  "rows_before": 10000000,
+  "rows_after": 10000000,
+  "columns_after": 20,
+  "total_sales_before": 104977853439.40274,
+  "total_sales_after": 104977853439.40274,
+  "total_sales_difference": 0.0,
+  "validation": {
+    "missing_counts": {
+      "Batch_ID": 0,
+      "Brew_Date": 0,
+      "Beer_Style": 0,
+      "SKU": 0,
+      "Location": 0,
+      "Fermentation_Time": 0,
+      "Temperature": 0,
+      "pH_Level": 0,
+      "Gravity": 0,
+      "Alcohol_Content": 0,
+      "Bitterness": 0,
+      "Color": 0,
+      "Ingredient_Ratio": 0,
+      "Volume_Produced": 0,
+      "Total_Sales": 0,
+      "Quality_Score": 0,
+      "Brewhouse_Efficiency": 0,
+      "Loss_During_Brewing": 0,
+      "Loss_During_Fermentation": 0,
+      "Loss_During_Bottling_Kegging": 0
+    },
+    "dtypes": {
+      "Batch_ID": "int64",
+      "Brew_Date": "str",
+      "Beer_Style": "str",
+      "SKU": "str",
+      "Location": "str",
+      "Fermentation_Time": "int64",
+      "Temperature": "float64",
+      "pH_Level": "float64",
+      "Gravity": "float64",
+      "Alcohol_Content": "float64",
+      "Bitterness": "int64",
+      "Color": "int64",
+      "Ingredient_Ratio": "str",
+      "Volume_Produced": "int64",
+      "Total_Sales": "float64",
+      "Quality_Score": "float64",
+      "Brewhouse_Efficiency": "float64",
+      "Loss_During_Brewing": "float64",
+      "Loss_During_Fermentation": "float64",
+      "Loss_During_Bottling_Kegging": "float64"
+    },
+    "duplicate_rows_after_first": 0,
+    "date_conversion_failures": 0,
+    "numeric_conversion_failures": {
+      "Batch_ID": 0,
+      "Fermentation_Time": 0,
+      "Temperature": 0,
+      "pH_Level": 0,
+      "Gravity": 0,
+      "Alcohol_Content": 0,
+      "Bitterness": 0,
+      "Color": 0,
+      "Volume_Produced": 0,
+      "Total_Sales": 0,
+      "Quality_Score": 0,
+      "Brewhouse_Efficiency": 0,
+      "Loss_During_Brewing": 0,
+      "Loss_During_Fermentation": 0,
+      "Loss_During_Bottling_Kegging": 0
+    },
+    "labels": {
+      "Beer_Style": [
+        "Ale",
+        "IPA",
+        "Lager",
+        "Pilsner",
+        "Porter",
+        "Sour",
+        "Stout",
+        "Wheat Beer"
+      ],
+      "SKU": [
+        "Bottles",
+        "Cans",
+        "Kegs",
+        "Pints"
+      ],
+      "Location": [
+        "Electronic City",
+        "HSR Layout",
+        "Indiranagar",
+        "Jayanagar",
+        "Koramangala",
+        "Malleswaram",
+        "Marathahalli",
+        "Rajajinagar",
+        "Whitefield",
+        "Yelahanka"
+      ]
+    }
+  },
+  "cleaning_log": [
+    {
+      "issue_found": "Blank/whitespace-only cells",
+      "action_taken": "Converted to missing values; rows retained",
+      "affected_records": 0,
+      "justification": "Blank text carries no observed value; no row deletion."
+    },
+    {
+      "issue_found": "Text formatting whitespace",
+      "action_taken": "Trimmed leading/trailing whitespace",
+      "affected_records": 0,
+      "justification": "Formatting-only normalization; category meaning preserved."
+    },
+    {
+      "issue_found": "Date and numeric representations",
+      "action_taken": "Parsed Brew_Date and numeric measurements",
+      "affected_records": 160000000,
+      "justification": "Required types; unparseable values become missing and are not invented."
+    },
+    {
+      "issue_found": "Potential sentinel codes and unusual values",
+      "action_taken": "Not recoded or removed automatically",
+      "affected_records": 0,
+      "justification": "Documentation does not establish that values such as 999, zero, or unusual measurements are missing/invalid."
+    },
+    {
+      "issue_found": "Duplicates",
+      "action_taken": "No rows removed",
+      "affected_records": 0,
+      "justification": "Repeated Batch_IDs or identical rows require domain evidence before deletion; unit of analysis is preserved."
+    },
+    {
+      "issue_found": "Missing Total_Sales",
+      "action_taken": "Rows retained; exclude only from analyses requiring observed sales",
+      "affected_records": 0,
+      "justification": "Sales outcomes must not be imputed."
+    }
+  ],
+  "unresolved_issues": [
+    "Meaning of possible sentinel values is undocumented.",
+    "Repeated Batch_IDs were not established as accidental duplicates.",
+    "The dataset documentation does not fully define whether Total_Sales is realized sales or an estimate."
+  ],
+  "unit_of_analysis": "Preserved one input row per output row; no records dropped."
+}
