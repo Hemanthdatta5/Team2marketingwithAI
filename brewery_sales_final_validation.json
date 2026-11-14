@@ -1,0 +1,146 @@
+{
+  "coverage": "full cleaned dataset; five-record source comparison",
+  "rows": 10000000,
+  "columns": 20,
+  "dtypes": {
+    "Batch_ID": "int64",
+    "Brew_Date": "str",
+    "Beer_Style": "str",
+    "SKU": "str",
+    "Location": "str",
+    "Fermentation_Time": "int64",
+    "Temperature": "float64",
+    "pH_Level": "float64",
+    "Gravity": "float64",
+    "Alcohol_Content": "float64",
+    "Bitterness": "int64",
+    "Color": "int64",
+    "Ingredient_Ratio": "str",
+    "Volume_Produced": "int64",
+    "Total_Sales": "float64",
+    "Quality_Score": "float64",
+    "Brewhouse_Efficiency": "float64",
+    "Loss_During_Brewing": "float64",
+    "Loss_During_Fermentation": "float64",
+    "Loss_During_Bottling_Kegging": "float64"
+  },
+  "missing_counts": {
+    "Batch_ID": 0,
+    "Brew_Date": 0,
+    "Beer_Style": 0,
+    "SKU": 0,
+    "Location": 0,
+    "Fermentation_Time": 0,
+    "Temperature": 0,
+    "pH_Level": 0,
+    "Gravity": 0,
+    "Alcohol_Content": 0,
+    "Bitterness": 0,
+    "Color": 0,
+    "Ingredient_Ratio": 0,
+    "Volume_Produced": 0,
+    "Total_Sales": 0,
+    "Quality_Score": 0,
+    "Brewhouse_Efficiency": 0,
+    "Loss_During_Brewing": 0,
+    "Loss_During_Fermentation": 0,
+    "Loss_During_Bottling_Kegging": 0
+  },
+  "duplicate_rows_after_first": 0,
+  "batch_id_unique": true,
+  "batch_id_note": "All 10,000,000 Batch_ID values were checked in the completed cleaning run; no repeats were reported.",
+  "date_range": {
+    "min": "2020-01-01 00:00:19",
+    "max": "2023-12-31 23:59:54"
+  },
+  "numeric_minimums": {
+    "Batch_ID": "0",
+    "Fermentation_Time": "10",
+    "Temperature": 15.000001163771437,
+    "pH_Level": 4.500000005935603,
+    "Gravity": 1.0300000027891478,
+    "Alcohol_Content": 4.500000235642255,
+    "Bitterness": "20",
+    "Color": "5",
+    "Volume_Produced": "500",
+    "Total_Sales": 1000.0009630942444,
+    "Quality_Score": 6.000000644037316,
+    "Brewhouse_Efficiency": 70.00000702282782,
+    "Loss_During_Brewing": 1.000000399567285,
+    "Loss_During_Fermentation": 1.0000008690556794,
+    "Loss_During_Bottling_Kegging": 1.000000209581532
+  },
+  "numeric_maximums": {
+    "Batch_ID": "9999999",
+    "Fermentation_Time": "19",
+    "Temperature": 24.99999828988797,
+    "pH_Level": 5.499999818305633,
+    "Gravity": 1.0799999980323736,
+    "Alcohol_Content": 5.999999932506248,
+    "Bitterness": "59",
+    "Color": "19",
+    "Volume_Produced": "4999",
+    "Total_Sales": 19999.99964105241,
+    "Quality_Score": 9.999998860537378,
+    "Brewhouse_Efficiency": 89.99999982126904,
+    "Loss_During_Brewing": 4.999999841589812,
+    "Loss_During_Fermentation": 4.999999816405875,
+    "Loss_During_Bottling_Kegging": 4.999999721589095
+  },
+  "labels": {
+    "Beer_Style": [
+      "Ale",
+      "IPA",
+      "Lager",
+      "Pilsner",
+      "Porter",
+      "Sour",
+      "Stout",
+      "Wheat Beer"
+    ],
+    "SKU": [
+      "Bottles",
+      "Cans",
+      "Kegs",
+      "Pints"
+    ],
+    "Location": [
+      "Electronic City",
+      "HSR Layout",
+      "Indiranagar",
+      "Jayanagar",
+      "Koramangala",
+      "Malleswaram",
+      "Marathahalli",
+      "Rajajinagar",
+      "Whitefield",
+      "Yelahanka"
+    ]
+  },
+  "total_sales": 104977853439.40274,
+  "sample_record_checks": [
+    {
+      "row_number": 1,
+      "same_values_after_semantic_normalization": true
+    },
+    {
+      "row_number": 2,
+      "same_values_after_semantic_normalization": true
+    },
+    {
+      "row_number": 3,
+      "same_values_after_semantic_normalization": true
+    },
+    {
+      "row_number": 4,
+      "same_values_after_semantic_normalization": true
+    },
+    {
+      "row_number": 5,
+      "same_values_after_semantic_normalization": true
+    }
+  ],
+  "unit_of_analysis": "Preserved: one output row for every input row; no rows removed.",
+  "cleaning_conclusion": "No missing values, exact duplicate rows, conversion failures, or label inconsistencies were found. No unsupported imputation, outlier removal, capping, or category collapsing was performed.",
+  "sample_comparison_method": "Numeric fields compared within 1e-9; dates parsed as datetimes; text compared after trimming whitespace."
+}
