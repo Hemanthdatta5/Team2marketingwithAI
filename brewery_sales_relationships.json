@@ -1,0 +1,220 @@
+{
+  "rows": 10000000,
+  "overall_sales_mean": 10497.785343940273,
+  "overall_sales_SD": 5485.995544804046,
+  "sales_correlations": {
+    "Alcohol_Content": {
+      "Pearson_r": 0.0005225099074255785,
+      "count": 10000000
+    },
+    "Quality_Score": {
+      "Pearson_r": 0.0005169406425883345,
+      "count": 10000000
+    },
+    "Fermentation_Time": {
+      "Pearson_r": 0.0001702529220166131,
+      "count": 10000000
+    }
+  },
+  "category_sales": {
+    "Beer_Style": {
+      "Ale": {
+        "count": 1251002,
+        "mean": 10508.682408726001,
+        "std": 5484.54722314524,
+        "difference_from_overall": 10.897064785727707,
+        "difference_in_overall_SD": 0.0019863422594370585
+      },
+      "IPA": {
+        "count": 1249603,
+        "mean": 10494.188318018621,
+        "std": 5483.339237081958,
+        "difference_from_overall": -3.597025921651948,
+        "difference_in_overall_SD": -0.0006556742331041084
+      },
+      "Lager": {
+        "count": 1249570,
+        "mean": 10497.74353301353,
+        "std": 5483.965878259647,
+        "difference_from_overall": -0.0418109267429827,
+        "difference_in_overall_SD": -7.621392762993237e-06
+      },
+      "Pilsner": {
+        "count": 1249426,
+        "mean": 10502.70286731936,
+        "std": 5485.285641230758,
+        "difference_from_overall": 4.9175233790865605,
+        "difference_in_overall_SD": 0.0008963775743026435
+      },
+      "Porter": {
+        "count": 1250773,
+        "mean": 10497.917708532274,
+        "std": 5485.340240987269,
+        "difference_from_overall": 0.13236459200015815,
+        "difference_in_overall_SD": 2.41277250262306e-05
+      },
+      "Sour": {
+        "count": 1250307,
+        "mean": 10497.855219954283,
+        "std": 5489.061289014925,
+        "difference_from_overall": 0.06987601400942367,
+        "difference_in_overall_SD": 1.2737162004370451e-05
+      },
+      "Stout": {
+        "count": 1250296,
+        "mean": 10489.536746774444,
+        "std": 5490.01411019936,
+        "difference_from_overall": -8.248597165829779,
+        "difference_in_overall_SD": -0.001503573435024437
+      },
+      "Wheat Beer": {
+        "count": 1249023,
+        "mean": 10493.646935096536,
+        "std": 5486.39879215797,
+        "difference_from_overall": -4.138408843737125,
+        "difference_in_overall_SD": -0.0007543587686024896
+      }
+    },
+    "SKU": {
+      "Bottles": {
+        "count": 2501597,
+        "mean": 10497.559772094397,
+        "std": 5486.45942178961,
+        "difference_from_overall": -0.22557184587640222,
+        "difference_in_overall_SD": -4.111775958149441e-05
+      },
+      "Cans": {
+        "count": 2498777,
+        "mean": 10501.09706715355,
+        "std": 5486.511255229031,
+        "difference_from_overall": 3.3117232132772187,
+        "difference_in_overall_SD": 0.0006036685932809138
+      },
+      "Kegs": {
+        "count": 2498753,
+        "mean": 10493.364786793853,
+        "std": 5484.821432730652,
+        "difference_from_overall": -4.420557146420833,
+        "difference_in_overall_SD": -0.0008057894160354683
+      },
+      "Pints": {
+        "count": 2500873,
+        "mean": 10499.118843277714,
+        "std": 5486.18954477099,
+        "difference_from_overall": 1.333499337441026,
+        "difference_in_overall_SD": 0.00024307335406132874
+      }
+    },
+    "Location": {
+      "Electronic City": {
+        "count": 999307,
+        "mean": 10491.990578512834,
+        "std": 5488.472557816831,
+        "difference_from_overall": -5.794765427439415,
+        "difference_in_overall_SD": -0.0010562832908108746
+      },
+      "HSR Layout": {
+        "count": 1000789,
+        "mean": 10505.58907108219,
+        "std": 5488.346991896024,
+        "difference_from_overall": 7.80372714191617,
+        "difference_in_overall_SD": 0.0014224814945953278
+      },
+      "Indiranagar": {
+        "count": 999887,
+        "mean": 10487.817560941912,
+        "std": 5487.495887682154,
+        "difference_from_overall": -9.967782998361145,
+        "difference_in_overall_SD": -0.0018169506185257362
+      },
+      "Jayanagar": {
+        "count": 1000760,
+        "mean": 10496.817764030147,
+        "std": 5484.154072740348,
+        "difference_from_overall": -0.9675799101260054,
+        "difference_in_overall_SD": -0.00017637271161155606
+      },
+      "Koramangala": {
+        "count": 1000220,
+        "mean": 10494.802220918506,
+        "std": 5485.96269879652,
+        "difference_from_overall": -2.983123021767824,
+        "difference_in_overall_SD": -0.0005437705877455972
+      },
+      "Malleswaram": {
+        "count": 999629,
+        "mean": 10499.03899099215,
+        "std": 5487.494199572227,
+        "difference_from_overall": 1.2536470518771239,
+        "difference_in_overall_SD": 0.00022851769412472294
+      },
+      "Marathahalli": {
+        "count": 1000164,
+        "mean": 10499.042237798785,
+        "std": 5486.025982202516,
+        "difference_from_overall": 1.2568938585118303,
+        "difference_in_overall_SD": 0.0002291095295734013
+      },
+      "Rajajinagar": {
+        "count": 1000147,
+        "mean": 10503.494086972034,
+        "std": 5485.869473875874,
+        "difference_from_overall": 5.708743031760605,
+        "difference_in_overall_SD": 0.001040602928882713
+      },
+      "Whitefield": {
+        "count": 999279,
+        "mean": 10497.706374035539,
+        "std": 5483.069523734288,
+        "difference_from_overall": -0.07896990473454935,
+        "difference_in_overall_SD": -1.439481751117063e-05
+      },
+      "Yelahanka": {
+        "count": 999818,
+        "mean": 10501.54469354537,
+        "std": 5483.061651752466,
+        "difference_from_overall": 3.7593496050958493,
+        "difference_in_overall_SD": 0.0006852629708488269
+      }
+    }
+  },
+  "category_comparisons": {
+    "Beer_Style": {
+      "lowest_mean_category": "Stout",
+      "highest_mean_category": "Ale",
+      "max_mean_gap_USD": 19.145661951557486,
+      "gap_divided_by_overall_SD": 0.003489915694461496,
+      "gap_as_percent_of_overall_SD": 0.34899156944614956
+    },
+    "SKU": {
+      "lowest_mean_category": "Kegs",
+      "highest_mean_category": "Cans",
+      "max_mean_gap_USD": 7.732280359698052,
+      "gap_divided_by_overall_SD": 0.001409458009316382,
+      "gap_as_percent_of_overall_SD": 0.1409458009316382
+    },
+    "Location": {
+      "lowest_mean_category": "Indiranagar",
+      "highest_mean_category": "HSR Layout",
+      "max_mean_gap_USD": 17.771510140277314,
+      "gap_divided_by_overall_SD": 0.0032394321131210637,
+      "gap_as_percent_of_overall_SD": 0.3239432113121064
+    }
+  },
+  "Batch_ID_check": {
+    "rows": 10000000,
+    "distinct_Batch_ID": 10000000,
+    "duplicate_occurrences_after_first": 0,
+    "missing_Batch_ID": 0,
+    "minimum": 0,
+    "maximum": 9999999,
+    "unique": true,
+    "method": "Exact presence array; within-chunk unique IDs and cross-chunk repeats counted; every ID type/range checked."
+  },
+  "verification": {
+    "group_counts_and_means_reconcile": true,
+    "all_rows_in_each_plot": true,
+    "overall_SD_matches_previous_exploration": true,
+    "source_size_and_mtime_unchanged": true
+  }
+}

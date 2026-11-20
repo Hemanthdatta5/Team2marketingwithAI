@@ -1,2 +1,4 @@
 brewery_sales_cleaned.csv
 __pycache__/
+.venv/
+.DS_Store
