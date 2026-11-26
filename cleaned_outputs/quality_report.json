@@ -1,0 +1,1060 @@
+{
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_file": "C:\\Users\\anlon\\OneDrive\\marketing\\Team2marketingwithAI\\Team2marketingwithAI\\raw_download\\online_retail_II.xlsx",
+  "documentation_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "sheet_profiles": [
+    {
+      "sheet": "Year 2009-2010",
+      "rows": 525461,
+      "columns": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "date_min": "2009-12-01 07:45:00",
+      "date_max": "2010-12-09 20:01:00"
+    },
+    {
+      "sheet": "Year 2010-2011",
+      "rows": 541910,
+      "columns": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "date_min": "2010-12-01 08:26:00",
+      "date_max": "2011-12-09 12:50:00"
+    }
+  ],
+  "sheet_names": [
+    "Year 2009-2010",
+    "Year 2010-2011"
+  ],
+  "columns_compatible": true,
+  "original_columns": [
+    "Invoice",
+    "StockCode",
+    "Description",
+    "Quantity",
+    "InvoiceDate",
+    "Price",
+    "Customer ID",
+    "Country"
+  ],
+  "renames": {
+    "Invoice": "InvoiceNo",
+    "Price": "UnitPrice",
+    "Customer ID": "CustomerID"
+  },
+  "combined_rows": 1067371,
+  "combined_columns": [
+    "source_sheet",
+    "source_row_id",
+    "InvoiceNo",
+    "StockCode",
+    "Description",
+    "Quantity",
+    "InvoiceDate",
+    "UnitPrice",
+    "CustomerID",
+    "Country",
+    "is_cancellation",
+    "LineAmount",
+    "line_total",
+    "has_negative_quantity",
+    "has_zero_price",
+    "has_negative_price",
+    "cancellation_quantity_inconsistent",
+    "negative_quantity_non_cancellation",
+    "possible_non_merchandise",
+    "purchase_eligible",
+    "purchase_exclusion_reason",
+    "Description_original",
+    "Description_recovered",
+    "_month"
+  ],
+  "exact_duplicate_rows_on_transaction_fields": 67242,
+  "cross_sheet_duplicate_rows_on_transaction_fields": 67242,
+  "duplicate_audit": {
+    "comparison_note": "Business-field comparisons exclude source_sheet, source_row_id, is_cancellation, and line_total.",
+    "identical_business_records": {
+      "key_fields": [
+        "InvoiceNo",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "UnitPrice",
+        "CustomerID",
+        "Country"
+      ],
+      "repeated_key_groups": 32907,
+      "rows_in_repeated_groups": 67242,
+      "extra_rows_beyond_one_per_group": 34335,
+      "max_rows_per_key": 20,
+      "within_sheet_repeated_key_groups": 10705,
+      "between_sheet_repeated_key_groups": 22202,
+      "rows_in_between_sheet_repeated_groups": 45046
+    },
+    "repeated_invoice_numbers": {
+      "key_fields": [
+        "InvoiceNo"
+      ],
+      "repeated_key_groups": 40334,
+      "rows_in_repeated_groups": 1054077,
+      "extra_rows_beyond_one_per_group": 1013743,
+      "max_rows_per_key": 1350,
+      "within_sheet_repeated_key_groups": 39246,
+      "between_sheet_repeated_key_groups": 1088,
+      "rows_in_between_sheet_repeated_groups": 45046
+    },
+    "repeated_invoice_product_combinations": {
+      "key_fields": [
+        "InvoiceNo",
+        "StockCode"
+      ],
+      "repeated_key_groups": 42638,
+      "rows_in_repeated_groups": 88585,
+      "extra_rows_beyond_one_per_group": 45947,
+      "max_rows_per_key": 20,
+      "within_sheet_repeated_key_groups": 20710,
+      "between_sheet_repeated_key_groups": 21928,
+      "rows_in_between_sheet_repeated_groups": 45046
+    },
+    "treatment": "No records were removed. Repeated invoices and invoice-product combinations can be valid transaction lines; identical records remain flagged because the dataset provides no evidence sufficient to distinguish accidental duplication from repeated source records."
+  },
+  "type_and_label_audit": {
+    "identifier_fields": [
+      "InvoiceNo",
+      "StockCode",
+      "CustomerID"
+    ],
+    "identifier_treatment": "Stored as string identifiers; missing values remain missing and are never converted to literal text nan.",
+    "invoice_date_conversion_failures": 0,
+    "quantity_conversion_failures": 0,
+    "unitprice_conversion_failures": 0,
+    "original_dtypes": {
+      "source_sheet": "str",
+      "source_row_id": "int64",
+      "InvoiceNo": "object",
+      "StockCode": "object",
+      "Description": "object",
+      "Quantity": "int64",
+      "InvoiceDate": "datetime64[us]",
+      "UnitPrice": "float64",
+      "CustomerID": "float64",
+      "Country": "str"
+    },
+    "trimmed_whitespace_counts": {
+      "InvoiceNo": 0,
+      "StockCode": 1,
+      "Description": 213035,
+      "Country": 0
+    },
+    "alphabetic_stockcode_rows_retained": 134986,
+    "product_description_similarity_rule": "No products were merged based on description similarity; StockCode remains the product identifier."
+  },
+  "unusual_values_audit": {
+    "cancellation_rows": 19494,
+    "cancellation_with_nonnegative_quantity": 1,
+    "negative_quantity_non_cancellation_rows": 3457,
+    "zero_price_rows": 6202,
+    "negative_price_rows": 5,
+    "possible_non_merchandise_rows": 13037,
+    "possible_non_merchandise_by_stockcode": {
+      "POST": 2115,
+      "DOT": 1444,
+      "M": 1421,
+      "21216": 850,
+      "22301": 706,
+      "37370": 581,
+      "22300": 573,
+      "22303": 571,
+      "23243": 509,
+      "22302": 411,
+      "22970": 328,
+      "C2": 279,
+      "22971": 279,
+      "20748": 187,
+      "22304": 182,
+      "D": 177,
+      "35810A": 174,
+      "22305": 153,
+      "37342": 135,
+      "21398": 130,
+      "72122": 126,
+      "21399": 125,
+      "21869": 117,
+      "21662": 116,
+      "S": 104,
+      "85159B": 102,
+      "BANK CHARGES": 102,
+      "85159A": 91,
+      "23444": 80,
+      "22932": 77,
+      "35810B": 71,
+      "ADJUST": 67,
+      "23099": 63,
+      "23413": 61,
+      "85168B": 53,
+      "AMAZONFEE": 43,
+      "21444": 37,
+      "20847": 29,
+      "21443": 28,
+      "gift_0001_20": 26,
+      "gift_0001_30": 24,
+      "23466": 24,
+      "23574": 16,
+      "CRUK": 16,
+      "23465": 16,
+      "85168A": 15,
+      "gift_0001_10": 14,
+      "20848": 12,
+      "22206": 10,
+      "22734": 7
+    },
+    "possible_non_merchandise_by_description": {
+      "POSTAGE": 2115,
+      "DOTCOM POSTAGE": 1444,
+      "Manual": 1426,
+      "COFFEE MUG CAT + BIRD DESIGN": 706,
+      "RETRO COFFEE MUGS ASSORTED": 579,
+      "COFFEE MUG DOG + BALL DESIGN": 573,
+      "COFFEE MUG APPLES DESIGN": 571,
+      "SET 3 RETROSPOT TEA,COFFEE,SUGAR": 535,
+      "SET OF TEA COFFEE SUGAR TINS PANTRY": 509,
+      "COFFEE MUG PEARS  DESIGN": 411,
+      "LONDON BUS COFFEE MUG": 328,
+      "SET 3 RED SPOT TIN TEA,COFFEE,SUGAR": 315,
+      "CARRIAGE": 279,
+      "QUEENS GUARD COFFEE MUG": 279,
+      "KENSINGTON COFFEE SET": 187,
+      "COFFEE MUG BLUE PAISLEY DESIGN": 182,
+      "Discount": 177,
+      "ENAMEL PINK COFFEE CONTAINER": 174,
+      "COFFEE MUG PINK PAISLEY DESIGN": 153,
+      "COFFEE SCENT PILLAR CANDLE": 126,
+      "POLKADOT COFFEE CUP & SAUCER PINK": 121,
+      "POTTING SHED COFFEE MUG": 117,
+      "VINTAGE GLASS COFFEE CADDY": 116,
+      "SAMPLES": 104,
+      "WHITE TEA,COFFEE,SUGAR JARS": 103,
+      "Bank Charges": 102,
+      "BLACK TEA,COFFEE,SUGAR JARS": 91,
+      "BLUE POLKADOT COFFEE MUG": 89,
+      "Next Day Carriage": 80,
+      "RED POLKADOT COFFEE  MUG": 76,
+      "BAKING MOULD TOFFEE CUP CHOCOLATE": 76,
+      "ENAMEL BLUE RIM COFFEE CONTAINER": 71,
+      "FRENCH CARRIAGE LANTERN": 63,
+      "RED  SPOTTY COFFEE  MUG": 54,
+      "BLACK BAROQUE CARRIAGE CLOCK": 53,
+      "AMAZON FEE": 43,
+      "Adjustment by john on 26/01/2010 16": 38,
+      "BLUE CHALET BIRDFEEDER": 37,
+      "BLUE  SPOTTY  COFFEE MUG": 36,
+      "VINTAGE COFFEE GRINDER BOX": 32,
+      "ZINC HEART LATTICE CHARGER LARGE": 29,
+      "OLIVE CHALET BIRDFEEDER": 28,
+      "Dotcomgiftshop Gift Voucher \u00a320.00": 26,
+      "Adjustment by john on 26/01/2010 17": 26,
+      "Dotcomgiftshop Gift Voucher \u00a330.00": 24,
+      "TUSCAN VILLA DOVECOTE BIRD FEEDER": 24,
+      "DECORATIVE VINTAGE COFFEE  BOX": 23,
+      "sold as set on dotcom": 20,
+      "adjustment": 16,
+      "PACKING CHARGE": 16
+    },
+    "quantity_summary": {
+      "min": -80995.0,
+      "median": 3.0,
+      "p99": 100.0,
+      "p999": 500.0,
+      "max": 80995.0
+    },
+    "unitprice_summary": {
+      "min": -53594.36,
+      "median": 2.1,
+      "p99": 18.0,
+      "p999": 217.01599999997765,
+      "max": 38970.0
+    },
+    "treatment": "Cancellations, negative/zero/negative-price rows, possible non-merchandise rows, and extremes are retained and flagged. No caps, absolute values, outlier deletion, or guessed corrections were applied. Inconsistencies remain unresolved for review."
+  },
+  "purchase_only_rules": {
+    "eligible_when": "not a cancellation invoice, Quantity > 0, UnitPrice >= 0, and not flagged as possible non-merchandise",
+    "zero_price_treatment": "Included as free merchandise when other eligibility rules pass.",
+    "signed_amount_definition": "LineAmount = Quantity * UnitPrice; signs are preserved in the master dataset.",
+    "exclusion_report": [
+      {
+        "exclusion_reason": "cancellation_invoice",
+        "rows": 19494,
+        "pct_of_master": 1.8263565339511754
+      },
+      {
+        "exclusion_reason": "possible_non_merchandise",
+        "rows": 11532,
+        "pct_of_master": 1.0804115907215017
+      },
+      {
+        "exclusion_reason": "nonpositive_quantity",
+        "rows": 3457,
+        "pct_of_master": 0.32387988806141443
+      },
+      {
+        "exclusion_reason": "negative_unit_price",
+        "rows": 5,
+        "pct_of_master": 0.0004684406827616639
+      }
+    ],
+    "eligible_rows": 1032883,
+    "excluded_rows": 34488,
+    "positive_purchase_amount_definition": "Sum of LineAmount over purchase_only; represents eligible merchandise purchases before cancellations/adjustments.",
+    "net_amount_definition": "Sum of signed LineAmount over the master; includes positive sales plus negative cancellations, credits, discounts, and other adjustments. A negative row is not automatically a confirmed product return."
+  },
+  "validation": {
+    "source_vs_master": {
+      "rows_source": 1067371,
+      "rows_master": 1067371,
+      "rows_difference": 0,
+      "distinct_invoices_source": 53628,
+      "distinct_invoices_master": 53628,
+      "identified_customers_source": 824364,
+      "identified_customers_master": 824364,
+      "quantity_sum_source": 10608492.0,
+      "quantity_sum_master": 10608492.0,
+      "line_amount_source": 19287250.568,
+      "line_amount_master": 19287250.568,
+      "explanation": "Master retains all source rows. Differences in text fields are whitespace normalization and documented unambiguous Description recovery; derived flags and LineAmount are added."
+    },
+    "master_rechecks": {
+      "missing_by_column": {
+        "source_sheet": 0,
+        "source_row_id": 0,
+        "InvoiceNo": 0,
+        "StockCode": 0,
+        "Description": 4382,
+        "Quantity": 0,
+        "InvoiceDate": 0,
+        "UnitPrice": 0,
+        "CustomerID": 243007,
+        "Country": 0,
+        "is_cancellation": 0,
+        "LineAmount": 0,
+        "line_total": 0,
+        "has_negative_quantity": 0,
+        "has_zero_price": 0,
+        "has_negative_price": 0,
+        "cancellation_quantity_inconsistent": 0,
+        "negative_quantity_non_cancellation": 0,
+        "possible_non_merchandise": 0,
+        "purchase_eligible": 0,
+        "purchase_exclusion_reason": 1032883
+      },
+      "identifier_dtypes": {
+        "InvoiceNo": "string",
+        "StockCode": "string",
+        "CustomerID": "string"
+      },
+      "numeric_dtypes": {
+        "Quantity": "int64",
+        "UnitPrice": "float64",
+        "LineAmount": "float64"
+      },
+      "distinct_countries": 43,
+      "distinct_stockcodes": 5304,
+      "date_min": "2009-12-01 07:45:00",
+      "date_max": "2011-12-09 12:50:00",
+      "quantity_min": -80995.0,
+      "quantity_max": 80995.0,
+      "unitprice_min": -53594.36,
+      "unitprice_max": 38970.0,
+      "duplicate_flagged_rows": 67242,
+      "rows_with_unresolved_missing_description": 4382
+    },
+    "spot_checks": [
+      {
+        "source_sheet": "Year 2009-2010",
+        "source_row_id": 2,
+        "invoice_source": "489434",
+        "invoice_master": "489434",
+        "stockcode_source": "85048",
+        "stockcode_master": "85048",
+        "quantity_source": 12.0,
+        "quantity_master": 12.0,
+        "unitprice_source": 6.95,
+        "unitprice_master": 6.95,
+        "trace_match": true
+      },
+      {
+        "source_sheet": "Year 2010-2011",
+        "source_row_id": 8226,
+        "invoice_source": "537131",
+        "invoice_master": "537131",
+        "stockcode_source": "22121",
+        "stockcode_master": "22121",
+        "quantity_source": 2.0,
+        "quantity_master": 2.0,
+        "unitprice_source": 5.95,
+        "unitprice_master": 5.95,
+        "trace_match": true
+      },
+      {
+        "source_sheet": "Year 2010-2011",
+        "source_row_id": 541911,
+        "invoice_source": "581587",
+        "invoice_master": "581587",
+        "stockcode_source": "POST",
+        "stockcode_master": "POST",
+        "quantity_source": 1.0,
+        "quantity_master": 1.0,
+        "unitprice_source": 18.0,
+        "unitprice_master": 18.0,
+        "trace_match": true
+      }
+    ]
+  },
+  "unresolved_issues": [
+    "1,310 descriptions remain missing because StockCode mappings were absent or ambiguous.",
+    "243,007 rows lack CustomerID and are not suitable for customer-level analyses.",
+    "Duplicate business records remain ambiguous and may affect totals if a downstream user deduplicates them.",
+    "Some possible non-merchandise flags use descriptive keywords and require business review.",
+    "One cancellation has a nonnegative quantity and 3,457 negative-quantity rows lack a cancellation prefix; these were retained for review."
+  ],
+  "quality_full_dataset": {
+    "rows": 1067371,
+    "missing_by_column": {
+      "source_sheet": 0,
+      "source_row_id": 0,
+      "InvoiceNo": 0,
+      "StockCode": 0,
+      "Description": 1310,
+      "Quantity": 0,
+      "InvoiceDate": 0,
+      "UnitPrice": 0,
+      "CustomerID": 243007,
+      "Country": 0,
+      "is_cancellation": 0,
+      "LineAmount": 0,
+      "line_total": 0,
+      "has_negative_quantity": 0,
+      "has_zero_price": 0,
+      "has_negative_price": 0,
+      "cancellation_quantity_inconsistent": 0,
+      "negative_quantity_non_cancellation": 0,
+      "possible_non_merchandise": 0,
+      "purchase_eligible": 0,
+      "purchase_exclusion_reason": 1032883,
+      "Description_original": 4382,
+      "Description_recovered": 0,
+      "_month": 0
+    },
+    "invalid_dates": 0,
+    "zero_quantity": 0,
+    "negative_quantity": 22950,
+    "negative_unit_price": 5,
+    "cancellation_rows": 19494,
+    "unique_invoices": 53628,
+    "unique_customers": 5942,
+    "date_min": "2009-12-01 07:45:00",
+    "date_max": "2011-12-09 12:50:00"
+  },
+  "missingness_by_column": [
+    {
+      "column": "source_sheet",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "source_row_id",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "InvoiceNo",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "StockCode",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "Description",
+      "missing_count": 4382,
+      "total_rows": 1067371,
+      "missing_pct": 0.4105414143723223
+    },
+    {
+      "column": "Quantity",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "InvoiceDate",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "UnitPrice",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "CustomerID",
+      "missing_count": 243007,
+      "total_rows": 1067371,
+      "missing_pct": 22.766872999172733
+    },
+    {
+      "column": "Country",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "is_cancellation",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "LineAmount",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "line_total",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "has_negative_quantity",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "has_zero_price",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "has_negative_price",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "cancellation_quantity_inconsistent",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "negative_quantity_non_cancellation",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "possible_non_merchandise",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "purchase_eligible",
+      "missing_count": 0,
+      "total_rows": 1067371,
+      "missing_pct": 0.0
+    },
+    {
+      "column": "purchase_exclusion_reason",
+      "missing_count": 1032883,
+      "total_rows": 1067371,
+      "missing_pct": 96.76888354658315
+    }
+  ],
+  "missing_description_by_sheet": [
+    {
+      "source_sheet": "Year 2009-2010",
+      "rows": 525461,
+      "missing_description": 2928,
+      "missing_description_pct": 0.5572249891048051
+    },
+    {
+      "source_sheet": "Year 2010-2011",
+      "rows": 541910,
+      "missing_description": 1454,
+      "missing_description_pct": 0.26831023601705084
+    }
+  ],
+  "missing_description_by_month": [
+    {
+      "_month": "2009-12",
+      "rows": 45228,
+      "missing_description": 228,
+      "missing_description_pct": 0.5041124966834705
+    },
+    {
+      "_month": "2010-01",
+      "rows": 31555,
+      "missing_description": 222,
+      "missing_description_pct": 0.7035335129139597
+    },
+    {
+      "_month": "2010-02",
+      "rows": 29388,
+      "missing_description": 510,
+      "missing_description_pct": 1.7354022049816251
+    },
+    {
+      "_month": "2010-03",
+      "rows": 41511,
+      "missing_description": 252,
+      "missing_description_pct": 0.6070680060706801
+    },
+    {
+      "_month": "2010-04",
+      "rows": 34057,
+      "missing_description": 110,
+      "missing_description_pct": 0.32298793199635906
+    },
+    {
+      "_month": "2010-05",
+      "rows": 35323,
+      "missing_description": 476,
+      "missing_description_pct": 1.3475639102001529
+    },
+    {
+      "_month": "2010-06",
+      "rows": 39983,
+      "missing_description": 175,
+      "missing_description_pct": 0.4376860165570367
+    },
+    {
+      "_month": "2010-07",
+      "rows": 33383,
+      "missing_description": 85,
+      "missing_description_pct": 0.254620615283228
+    },
+    {
+      "_month": "2010-08",
+      "rows": 33306,
+      "missing_description": 159,
+      "missing_description_pct": 0.47739146099801844
+    },
+    {
+      "_month": "2010-09",
+      "rows": 42091,
+      "missing_description": 135,
+      "missing_description_pct": 0.3207336485234373
+    },
+    {
+      "_month": "2010-10",
+      "rows": 59098,
+      "missing_description": 157,
+      "missing_description_pct": 0.26566042844089477
+    },
+    {
+      "_month": "2010-11",
+      "rows": 78015,
+      "missing_description": 312,
+      "missing_description_pct": 0.39992309171313206
+    },
+    {
+      "_month": "2010-12",
+      "rows": 65004,
+      "missing_description": 232,
+      "missing_description_pct": 0.3569011137776137
+    },
+    {
+      "_month": "2011-01",
+      "rows": 35147,
+      "missing_description": 114,
+      "missing_description_pct": 0.3243520072836942
+    },
+    {
+      "_month": "2011-02",
+      "rows": 27707,
+      "missing_description": 65,
+      "missing_description_pct": 0.23459775507994368
+    },
+    {
+      "_month": "2011-03",
+      "rows": 36748,
+      "missing_description": 165,
+      "missing_description_pct": 0.4490040274300642
+    },
+    {
+      "_month": "2011-04",
+      "rows": 29916,
+      "missing_description": 226,
+      "missing_description_pct": 0.7554485893836074
+    },
+    {
+      "_month": "2011-05",
+      "rows": 37030,
+      "missing_description": 138,
+      "missing_description_pct": 0.37267080745341613
+    },
+    {
+      "_month": "2011-06",
+      "rows": 36874,
+      "missing_description": 91,
+      "missing_description_pct": 0.24678635352823128
+    },
+    {
+      "_month": "2011-07",
+      "rows": 39518,
+      "missing_description": 155,
+      "missing_description_pct": 0.39222632724328155
+    },
+    {
+      "_month": "2011-08",
+      "rows": 35284,
+      "missing_description": 82,
+      "missing_description_pct": 0.23239995465366736
+    },
+    {
+      "_month": "2011-09",
+      "rows": 50226,
+      "missing_description": 99,
+      "missing_description_pct": 0.19710906701708278
+    },
+    {
+      "_month": "2011-10",
+      "rows": 60742,
+      "missing_description": 104,
+      "missing_description_pct": 0.17121596259589741
+    },
+    {
+      "_month": "2011-11",
+      "rows": 84711,
+      "missing_description": 75,
+      "missing_description_pct": 0.08853631759747849
+    },
+    {
+      "_month": "2011-12",
+      "rows": 25526,
+      "missing_description": 15,
+      "missing_description_pct": 0.058763613570477165
+    }
+  ],
+  "missing_description_by_country": [
+    {
+      "Country": "Australia",
+      "rows": 1913,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Austria",
+      "rows": 938,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Bahrain",
+      "rows": 126,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Belgium",
+      "rows": 3123,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Bermuda",
+      "rows": 34,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Brazil",
+      "rows": 94,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Canada",
+      "rows": 228,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Channel Islands",
+      "rows": 1664,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Cyprus",
+      "rows": 1176,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Czech Republic",
+      "rows": 30,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Denmark",
+      "rows": 817,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "EIRE",
+      "rows": 17866,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "European Community",
+      "rows": 61,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Finland",
+      "rows": 1049,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "France",
+      "rows": 14330,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Germany",
+      "rows": 17624,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Greece",
+      "rows": 663,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Hong Kong",
+      "rows": 364,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Iceland",
+      "rows": 253,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Israel",
+      "rows": 371,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Italy",
+      "rows": 1534,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Japan",
+      "rows": 582,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Korea",
+      "rows": 63,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Lebanon",
+      "rows": 58,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Lithuania",
+      "rows": 189,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Malta",
+      "rows": 299,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Netherlands",
+      "rows": 5140,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Nigeria",
+      "rows": 32,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Norway",
+      "rows": 1455,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Poland",
+      "rows": 535,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Portugal",
+      "rows": 2620,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "RSA",
+      "rows": 169,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Saudi Arabia",
+      "rows": 10,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Singapore",
+      "rows": 346,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Spain",
+      "rows": 3811,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Sweden",
+      "rows": 1364,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Switzerland",
+      "rows": 3189,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "Thailand",
+      "rows": 76,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "USA",
+      "rows": 535,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "United Arab Emirates",
+      "rows": 500,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "United Kingdom",
+      "rows": 981330,
+      "missing_description": 4382,
+      "missing_description_pct": 0.44653684285612383
+    },
+    {
+      "Country": "Unspecified",
+      "rows": 756,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    },
+    {
+      "Country": "West Indies",
+      "rows": 54,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    }
+  ],
+  "missing_description_by_cancellation": [
+    {
+      "is_cancellation": false,
+      "rows": 1047877,
+      "missing_description": 4382,
+      "missing_description_pct": 0.41817885114378883
+    },
+    {
+      "is_cancellation": true,
+      "rows": 19494,
+      "missing_description": 0,
+      "missing_description_pct": 0.0
+    }
+  ],
+  "description_recovery": {
+    "reliable_stockcode_count": 3735,
+    "recovered_description_rows": 3072,
+    "remaining_missing_description_rows": 1310,
+    "method": "Filled only when StockCode had exactly one distinct nonblank Description in the full dataset; original values preserved in Description_original."
+  },
+  "customer_identification_impact": {
+    "missing_customerid_rows": 243007,
+    "identified_customer_rows": 824364,
+    "identified_customer_row_pct": 77.23312700082727,
+    "treatment": "Missing CustomerID rows remain in the master dataset and are excluded only from analyses that require customer identification."
+  },
+  "cleaning_decisions": [
+    "Trim surrounding whitespace in text fields.",
+    "Parse dates and numeric fields with coercion to missing only when unparsable.",
+    "Add is_cancellation and line_total derived fields.",
+    "Retain all source rows and documented cancellations/negative quantities/missing customer IDs.",
+    "No rows were dropped because duplicate rows were not proven erroneous."
+  ],
+  "row_definition": "One row is one invoice line: one product (StockCode) and quantity recorded on an invoice at a unit price and timestamp. One invoice appears on multiple rows because an order can contain multiple products or separate product lines."
+}

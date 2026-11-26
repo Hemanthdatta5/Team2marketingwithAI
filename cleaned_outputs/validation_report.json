@@ -1,0 +1,102 @@
+{
+  "source_vs_master": {
+    "rows_source": 1067371,
+    "rows_master": 1067371,
+    "rows_difference": 0,
+    "distinct_invoices_source": 53628,
+    "distinct_invoices_master": 53628,
+    "identified_customers_source": 824364,
+    "identified_customers_master": 824364,
+    "quantity_sum_source": 10608492.0,
+    "quantity_sum_master": 10608492.0,
+    "line_amount_source": 19287250.568,
+    "line_amount_master": 19287250.568,
+    "explanation": "Master retains all source rows. Differences in text fields are whitespace normalization and documented unambiguous Description recovery; derived flags and LineAmount are added."
+  },
+  "master_rechecks": {
+    "missing_by_column": {
+      "source_sheet": 0,
+      "source_row_id": 0,
+      "InvoiceNo": 0,
+      "StockCode": 0,
+      "Description": 4382,
+      "Quantity": 0,
+      "InvoiceDate": 0,
+      "UnitPrice": 0,
+      "CustomerID": 243007,
+      "Country": 0,
+      "is_cancellation": 0,
+      "LineAmount": 0,
+      "line_total": 0,
+      "has_negative_quantity": 0,
+      "has_zero_price": 0,
+      "has_negative_price": 0,
+      "cancellation_quantity_inconsistent": 0,
+      "negative_quantity_non_cancellation": 0,
+      "possible_non_merchandise": 0,
+      "purchase_eligible": 0,
+      "purchase_exclusion_reason": 1032883
+    },
+    "identifier_dtypes": {
+      "InvoiceNo": "string",
+      "StockCode": "string",
+      "CustomerID": "string"
+    },
+    "numeric_dtypes": {
+      "Quantity": "int64",
+      "UnitPrice": "float64",
+      "LineAmount": "float64"
+    },
+    "distinct_countries": 43,
+    "distinct_stockcodes": 5304,
+    "date_min": "2009-12-01 07:45:00",
+    "date_max": "2011-12-09 12:50:00",
+    "quantity_min": -80995.0,
+    "quantity_max": 80995.0,
+    "unitprice_min": -53594.36,
+    "unitprice_max": 38970.0,
+    "duplicate_flagged_rows": 67242,
+    "rows_with_unresolved_missing_description": 4382
+  },
+  "spot_checks": [
+    {
+      "source_sheet": "Year 2009-2010",
+      "source_row_id": 2,
+      "invoice_source": "489434",
+      "invoice_master": "489434",
+      "stockcode_source": "85048",
+      "stockcode_master": "85048",
+      "quantity_source": 12.0,
+      "quantity_master": 12.0,
+      "unitprice_source": 6.95,
+      "unitprice_master": 6.95,
+      "trace_match": true
+    },
+    {
+      "source_sheet": "Year 2010-2011",
+      "source_row_id": 8226,
+      "invoice_source": "537131",
+      "invoice_master": "537131",
+      "stockcode_source": "22121",
+      "stockcode_master": "22121",
+      "quantity_source": 2.0,
+      "quantity_master": 2.0,
+      "unitprice_source": 5.95,
+      "unitprice_master": 5.95,
+      "trace_match": true
+    },
+    {
+      "source_sheet": "Year 2010-2011",
+      "source_row_id": 541911,
+      "invoice_source": "581587",
+      "invoice_master": "581587",
+      "stockcode_source": "POST",
+      "stockcode_master": "POST",
+      "quantity_source": 1.0,
+      "quantity_master": 1.0,
+      "unitprice_source": 18.0,
+      "unitprice_master": 18.0,
+      "trace_match": true
+    }
+  ]
+}
